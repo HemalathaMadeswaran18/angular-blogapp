@@ -1,0 +1,109 @@
+
+
+
+<h2 class="mt-2 text-center text-warning" style="padding-top: 1%;"> Blogs</h2>
+
+
+
+<div class="text-center" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form [formGroup] = "blogForm" (ngSubmit)="addblog()">
+
+          <!-- <div class="mt-2">
+            <input type="text" class="form-control" [(ngModel)]="blog.title" placeholder="Title">
+          </div> -->
+
+          <div class="mt-2">
+            <input type="text" formControlName="title" class="form-control" name="title" placeholder="title">
+        <div class="mt-1 text-danger " *ngIf="(Title?.invalid && Title?.dirty) || (Title?.invalid && Title?.touched)">
+           TITLE IS REQUIRED
+        </div>
+        </div>
+
+
+  
+          <!-- <div class="mt-2">
+            <input type="text" class="form-control" [(ngModel)]="blog.Content" placeholder="description">
+          </div> -->
+
+          <div class="mt-2">
+            <input type="text" formControlName="content" class="form-control" name="content" placeholder="content">
+        <div class="mt-1 text-danger " *ngIf="(Content?.invalid && Content?.dirty) || (Content?.invalid && Content?.touched)">
+           CONTENT IS REQUIRED
+        </div>
+        </div>
+
+
+        <div class="mt-2">
+          <input type="text" formControlName="aname" class="form-control" name="aname" placeholder="author name">
+      <div class="mt-1 text-danger " *ngIf="(Aname?.invalid && Aname?.dirty) || (Aname?.invalid && Aname?.touched)">
+         AUTHOR NAME IS REQUIRED
+      </div>
+      </div>
+
+
+      <div class="mt-2">
+        <input type="text" formControlName="aemail" class="form-control" name="aemail" placeholder="author email">
+    <div class="mt-1 text-danger " *ngIf="(Aemail?.invalid && Aemail?.dirty) || (Aemail?.invalid && Aemail?.touched)">
+       AUTHOR EMAIL IS REQUIRED
+    </div>
+    </div>
+
+
+
+  
+          <div class="mt-2">
+            <button class="btn btn-primary"  style="margin: 1%;">Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+<div class="card-list" style="padding-top: 5%;">
+    <div class="card" *ngFor="let blog of blogs" >
+      <div class="card-header">
+        {{ blog.title }} 
+      </div>
+      <div class="card-body">
+        <p>Author Name: {{ blog.authorName }}</p>
+        <p>Author Email: {{ blog.authorEmail }}</p>
+        <p>Content: {{ blog.Content }}</p>
+
+        <div class="button-container">
+       
+        </div>
+        
+        
+          
+          
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+  
+
+  
