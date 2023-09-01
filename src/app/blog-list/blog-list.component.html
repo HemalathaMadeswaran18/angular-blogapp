@@ -1,15 +1,19 @@
 
+<div style="  background: #009688;
+color: rgb(190, 190, 190);">
+
+<h2 class="mt-2 text-center text-warning" style="padding-top: 1%;">The future is now</h2>
 
 
-<h2 class="mt-2 text-center text-warning" style="padding-top: 1%;"> Blogs</h2>
-
-
+<div class="d-flex justify-content-center">
+  <button class="btn btn-secondary" (click)="toggleForm()">Submit your own blog</button>
+</div>
 
 <div class="text-center" >
     <div class="container">
       <div class="row">
         <div class="col-md-4 offset-md-4">
-            <form [formGroup] = "blogForm" (ngSubmit)="addblog()">
+            <form [formGroup] = "blogForm" (ngSubmit)="addblog()" *ngIf="showForm">
 
           <!-- <div class="mt-2">
             <input type="text" class="form-control" [(ngModel)]="blog.title" placeholder="Title">
@@ -69,41 +73,59 @@
 
 
 
-
-<div class="card-list" style="padding-top: 5%;">
-    <div class="card" *ngFor="let blog of blogs" >
+  <!-- <div class="card-list" style="padding-top: 5%;">
+    <div class="card" *ngFor="let blog of blogs">
       <div class="card-header">
-        {{ blog.title }} 
+        {{ blog.title }}
       </div>
-      <div class="card-body">
-        <p>Author Name: {{ blog.authorName }}</p>
-        <p>Author Email: {{ blog.authorEmail }}</p>
+      <div class="card-body" [ngClass]="{ 'expanded': blog.expanded }">
+        <p>By: {{ blog.authorName }}</p>
+        
         <p>Content: {{ blog.Content }}</p>
 
-        <div class="button-container">
+        <small>for more info contact: {{ blog.authorEmail }}</small>
+
        
-        </div>
-        
-        
-          
-          
-        
+      </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="card text-center col-md-3 mt-3 col-sm-10 m-4" *ngFor="let blog of blogs; let i = index">
+      <div class="card-header p-0">
+        <img src="{{ initialGifLinks[i] }}" alt="" class="w-100">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ blog.title }}</h5>
+        <p class="card-text">Content: {{ blog.Content }}</p>
+      </div>
+      <div class="card-footer text-muted">
+        For more info contact: {{ blog.authorEmail }}
       </div>
     </div>
   </div>
-
-
-
-  
-  
-
-
-
+</div>
 
 
 
 
 
   
+  
+
+
+
+
+
+
+
 
   
+
+</div>

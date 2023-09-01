@@ -1,18 +1,43 @@
 {
   "blogs": [
     {
-      "title": "sasas",
-      "Content": "asasas",
-      "authorName": "asasasa",
-      "authorEmail": "sasasas",
-      "id": 1
+      "title": "Choosing the right programming language ",
+      "Content": "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "authorName": "Hemalatha M",
+      "authorEmail": "hema@gmail.com",
+      "id": 3
     },
     {
-      "title": "a",
-      "Content": "aa",
-      "authorName": "a",
-      "authorEmail": "a",
-      "id": 2
+      "title": "Why AI wont take over your job",
+      "Content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+      "authorName": "John Doe",
+      "authorEmail": "john@gmail.com",
+      "expanded": false,
+      "id": 4
+    },
+    {
+      "title": "What is the best Degree?",
+      "Content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+      "authorName": "Jane",
+      "authorEmail": "jane@gmail.com",
+      "expanded": false,
+      "id": 5
+    },
+    {
+      "title": "How to always stay young",
+      "Content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+      "authorName": "Barbie",
+      "authorEmail": "barbie@gmail.com",
+      "expanded": false,
+      "id": 6
+    },
+    {
+      "title": "Should I move out of my house?",
+      "Content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+      "authorName": "Barbie",
+      "authorEmail": "barbie@gmail.com",
+      "expanded": false,
+      "id": 7
     }
   ]
 }

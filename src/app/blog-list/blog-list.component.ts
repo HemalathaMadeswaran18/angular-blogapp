@@ -12,6 +12,17 @@ export class BlogListComponent {
   constructor(private service: BlogServiceService, private fb:FormBuilder){}
 
 
+  public initialGifLinks: string[] = [
+    "https://i.gifer.com/9vil.gif",
+    "https://i.gifer.com/H9pn.gif",
+    "https://i.pinimg.com/originals/fc/68/f8/fc68f86873c9c661e84ad442cf8fb6cf.gif",
+   "https://i.gifer.com/iM5.gif",
+    "https://i.gifer.com/ChKB.gif",
+    "https://i.gifer.com/AZSC.gif",
+    "https://i.gifer.com/J4x.gif"
+  ];
+  
+
 
   public blogs :Array<EBlog>=[];
   public blog:EBlog={} as EBlog;
@@ -38,6 +49,7 @@ export class BlogListComponent {
 
       this.blog.authorName = this.blogForm.get('aname')!.value!;
       this.blog.authorEmail = this.blogForm.get('aemail')!.value!;
+      this.blog.expanded = false;
 
       this.service.AddBlog(this.blog).subscribe((data:any)=>
       this.blogs.push(data));
@@ -67,29 +79,22 @@ export class BlogListComponent {
       return this.blogForm.get('aemail');
 
     }
+    toggleCard(blog: EBlog) {
+      blog.expanded = !blog.expanded;
+    }
+ 
+
+    showForm = false; // Initially, the form is hidden
+    formData = { name: '', email: '' }; // Data model for your form fields
   
-    // updatetodbContact() {
-    //   this.service.UpdateContact(this.contact.id, this.contact).subscribe(updatedContact => {
-    //     // Update the contact in the contacts array with the updated data
-    //     const index = this.contacts.findIndex(c => c.id === updatedContact.id);
-    //     if (index !== -1) {
-    //       this.contacts[index] = updatedContact;
-    //     }
-    //   });
-    // }
+    toggleForm() {
+      this.showForm = !this.showForm; // Toggle the form's visibility
+    }
   
-    // updateContact(contact: EBlog) {
-    //   // Populate the input fields with the selected contact's values
-    //   this.contact = { ...contact };
-    // }
-  
-    clear(){
-      // this.contact = { id: '',
-      // firstname: '',
-      // lastname: '',
-      // email: '',
-      // city: '',
-      // phone: ''};
+    submitForm() {
+      // Handle form submission here
+      console.log('Form submitted:', this.formData);
+      // You can add further logic to send the form data to your backend or perform any other actions.
     }
     
 

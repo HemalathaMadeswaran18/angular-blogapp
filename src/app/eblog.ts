@@ -4,4 +4,5 @@ export interface EBlog {
     authorName:string;
     authorEmail:string ;
     Content:string ;
+    expanded: boolean;
 }
