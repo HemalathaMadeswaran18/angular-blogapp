@@ -33,7 +33,5 @@ AddBlog(blog:EBlog){
     return this.http.delete(`http://localhost:3000/blogs/${id}`);
   }
 
-  UpdatEBlog(id: string, updatedBlog: EBlog): Observable<EBlog> {
-    return this.http.put<EBlog>(`http://localhost:3000/blogs/${id}`, updatedBlog);
-  }
+
 }
